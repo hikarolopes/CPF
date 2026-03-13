@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de CPF Válido</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de CPF Válido</h1>
+        <p class="subtitle">Gere números de CPF seguindo as regras oficiais</p>
+
+        <div class="criteria-box">
+            <h3>📋 Critérios de Validação do CPF:</h3>
+            <ul>
+                <li>11 dígitos numéricos (XXX.XXX.XXX-XX)</li>
+                <li>Não pode ter todos os dígitos iguais</li>
+                <li>1º dígito verificador: baseado nos 9 primeiros números</li>
+                <li>2º dígito verificador: baseado nos 10 primeiros números</li>
+                <li>Cálculo utiliza pesos de 10 a 2 para o 1º dígito</li>
+                <li>Cálculo utiliza pesos de 11 a 2 para o 2º dígito</li>
+            </ul>
+        </div>
+
+        <div class="cpf-container">
+            <div class="cpf-number" id="cpfDisplay">___.___.___-__</div>
+            
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="gerarCPF()">Gerar Novo CPF</button>
+                <button class="btn btn-secondary" onclick="copiarCPF()">Copiar CPF</button>
+            </div>
+        </div>
+
+        <div class="validation-section">
+            <h3>🔍 Validar CPF Gerado:</h3>
+            <div class="validation-links">
+                <a href="https://www.4devs.com.br/validador_cpf" target="_blank">4Devs - Validador</a>
+                <a href="https://www.geradorcpf.com/validador-de-cpf.htm" target="_blank">GeradorCPF.com</a>
+                <a href="https://www.receita.fazenda.gov.br/aplicacoes/atcta/cpf/consultapublica.asp" target="_blank">Receita Federal</a>
+                <a href="https://www.serasa.com.br/validador-cpf" target="_blank">Serasa</a>
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+        <div class="footer">
+            CPF gerado aleatoriamente seguindo as regras oficiais de validação
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
